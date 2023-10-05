@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    {% for warns in warnings %}
+    <li>{{ warns }} </li>
+    {% endfor %}
+    
+    {% for rule in rules.behaviors %}
+    <ul> {{rule }}   </ul>
+    {% endfor %}
+
+{% endblock content %}

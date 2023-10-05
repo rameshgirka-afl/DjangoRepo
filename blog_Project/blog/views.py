@@ -7,9 +7,12 @@ import json, logging, os,os.path
 
 contextJson = None
 dataPath = os.path.dirname(__file__) + '/data.json'
+title = 'load_data_json'
 with open(dataPath,'r') as fr:
     contextJson = json.loads(fr.read())
     #logging.logger
 
 def home(request):
     return render(request,'blog/home.html', contextJson)
+def about(request):
+    return render(request,'blog/about.html', contextJson)
